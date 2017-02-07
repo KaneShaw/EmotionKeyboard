@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EmotionKeyboardDemo</string>
+    <string name="send">发送</string>
+    <string name="photo">图片</string>
+</resources>
