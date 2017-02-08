@@ -1,7 +1,7 @@
 package com.xk2318.emotionkeyboard.utils;
 
 /**
- * Created by xiaokai on 2016/12/21.
+ * Created by xiaokai on 2017/02/07.
  * 字符串匹配表情
  */
 import android.content.Context;
@@ -25,7 +25,7 @@ public class SpanStringUtils {
     public static SpannableString getEmotionContent(final Context context, final TextView tv, String source) {
     	int emotionNum = 0;
         SpannableString spannableString = new SpannableString(source);
-        String regexEmotion = "\\[[s]:\\d+\\]";//正则表达式规则
+        String regexEmotion = "\\[[s]:\\d+\\]";//正则表达式规则 --> [d:数字]
         Pattern patternEmotion = Pattern.compile(regexEmotion);
         Matcher matcherEmotion = patternEmotion.matcher(spannableString);
         while (matcherEmotion.find()) {

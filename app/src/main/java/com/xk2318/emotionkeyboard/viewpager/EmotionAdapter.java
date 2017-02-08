@@ -10,7 +10,7 @@ import android.util.SparseArray;
 import android.view.ViewGroup;
 
 /**
- * Created by dss886 on 15/9/22.
+ * Created by xiaokai on 2017/02/07.
  */
 public class EmotionAdapter extends FragmentStatePagerAdapter {
     private SparseArray<Fragment> mPages;

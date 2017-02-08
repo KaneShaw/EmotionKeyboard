@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindToEmotionKeyboard() {
-        emotionKeyboard = EmotionKeyboard.with(this).setExtendView(extendView).setEmotionView(emotionView)
+        emotionKeyboard = EmotionKeyboard.with(this)
+                .setExtendView(extendView)
+                .setEmotionView(emotionView)
                 .bindToContent(txtContent)
                 .bindToEditText(etContent)
                 .bindToExtendbutton(imgExtend)
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         setUpExtendView();
     }
 
+    /* 设置表情布局下的视图 */
     private void setUpEmotionViewPager() {
         int fragmentNum;
 		/*获取ems文件夹有多少个表情  减1 是因为有个删除键
@@ -92,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         setUpTipPoints(fragmentNum, mViewPager);
     }
 
-    /* 设置扩展布局视图 */
+    /* 设置扩展布局下的视图 */
     private void setUpExtendView() {
         findViewById(R.id.btn_replay_layout_pic).setOnClickListener(new View.OnClickListener() {
 

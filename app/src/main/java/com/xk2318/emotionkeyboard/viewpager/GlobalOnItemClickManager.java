@@ -1,7 +1,7 @@
 package com.xk2318.emotionkeyboard.viewpager;
 
 /**
- * Created by xiaokai on 2016/12/21.
+ * Created by xiaokai on 2017/02/07.
  */
 import android.content.Context;
 import android.view.KeyEvent;

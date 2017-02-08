@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import com.xk2318.emotionkeyboarddemo.R;
 
 /**
- * Created by Administrator on 2016/12/25 0025.
+ * Created by xiaokai on 2017/02/07.
  */
 public class EmotionFragment extends Fragment {
 
