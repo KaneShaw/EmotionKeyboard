@@ -42,3 +42,8 @@ Step 2. Add the dependency
         	return false;
    	 }
 	 
+注意：具体使用方法请参照demo
+
+### Views Instruction
+![05](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/05.jpg)
+![06](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/06.jpg)
