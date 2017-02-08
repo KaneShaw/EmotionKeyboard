@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     private FrameLayout extendView, emotionView;
 
-    private TextView txtContent;
-    private ImageView imgExtend, imgEmotion;
-    private EditText etContent;
+    private TextView contentView;
+    private ImageView extendButton, emotionButton;
+    private EditText edittext;
     private Button btnSend;
 
     private EmotionKeyboard emotionKeyboard;
@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        txtContent = (TextView) findViewById(R.id.txt_main_content);
-        imgExtend = (ImageView) findViewById(R.id.img_reply_layout_add);
-        imgEmotion = (ImageView) findViewById(R.id.img_reply_layout_emotion);
-        etContent = (EditText) findViewById(R.id.edit_text);
-        etContent.addTextChangedListener(new ButtonBtnWatcher());//动态监听EditText
+        contentView = (TextView) findViewById(R.id.txt_main_content);
+        extendButton = (ImageView) findViewById(R.id.img_reply_layout_add);
+        emotionButton = (ImageView) findViewById(R.id.img_reply_layout_emotion);
+        edittext = (EditText) findViewById(R.id.edit_text);
+        edittext.addTextChangedListener(new ButtonBtnWatcher());//动态监听EditText
         btnSend = (Button) findViewById(R.id.btn_send);
         extendView = (FrameLayout) findViewById(R.id.extend_layout);
         emotionView = (FrameLayout) findViewById(R.id.emotion_layout);
@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
         emotionKeyboard = EmotionKeyboard.with(this)
                 .setExtendView(extendView)
                 .setEmotionView(emotionView)
-                .bindToContent(txtContent)
-                .bindToEditText(etContent)
-                .bindToExtendbutton(imgExtend)
-                .bindToEmotionButton(imgEmotion)
+                .bindToContent(contentView)
+                .bindToEditText(edittext)
+                .bindToExtendbutton(extendButton)
+                .bindToEmotionButton(emotionButton)
                 .build();
         setUpEmotionViewPager();
         setUpExtendView();
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-
+                //图片按钮的点击事件
             }
         });
     }
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if(!TextUtils.isEmpty(etContent.getText().toString())){ //有文本内容，按钮为可点击状态
+            if(!TextUtils.isEmpty(edittext.getText().toString())){ //有文本内容，按钮为可点击状态
                 btnSend.setBackgroundResource(R.drawable.shape_button_reply_button_clickable);
                 btnSend.setTextColor(getResources().getColor(R.color.light_white));
             } else { // 无文本内容，按钮为不可点击状态
