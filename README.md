@@ -1,10 +1,10 @@
 # EmotionKeyboard
 仿微信具有表情输入、拍照上传的键盘
 
-![01](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/01.jpg)
-![02](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/02.jpg)
-![03](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/03.jpg)
-![04](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/04.jpg)
+![01](https://github.com/KaneShaw/EmotionKeyboard/blob/master/displayPics/01.jpg)
+![02](https://github.com/KaneShaw/EmotionKeyboard/blob/master/displayPics/02.jpg)
+![03](https://github.com/KaneShaw/EmotionKeyboard/blob/master/displayPics/03.jpg)
+![04](https://github.com/KaneShaw/EmotionKeyboard/blob/master/displayPics/04.jpg)
 
 ### Download	
 Step 1. Add the JitPack repository to your build file
@@ -42,3 +42,8 @@ Step 2. Add the dependency
         	return false;
    	 }
 	 
+注意：具体使用方法请参照demo
+
+### Views Instruction
+![05](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/05.jpg)
+![06](https://github.com/KaneShaw/EmotionKeyboard/raw/master/displayPics/06.jpg)
