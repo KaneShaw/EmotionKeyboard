@@ -59,7 +59,7 @@ public class EmotionKeyboard {
 					 * 若扩展布局可见，则 锁定内容布局高度、隐藏扩展布局、显示软键盘、解锁内容布局高度
 					 * 若表情布局与扩展布局均不可见，则do nothing
 					 */
-                    if(mEmotionLayout.isShown()){
+                    if(mEmotionLayout != null && mEmotionLayout.isShown()){
                         lockContentHeight();
                         hideLayout(mEmotionLayout, true);
                         mEditText.postDelayed(new Runnable() {
@@ -68,7 +68,7 @@ public class EmotionKeyboard {
                                 unlockContentHeightDelayed();
                             }
                         }, 200L);
-                    } else if(mExtendLayout.isShown()){
+                    } else if(mExtendLayout != null && mExtendLayout.isShown()){
                         lockContentHeight();
                         hideLayout(mExtendLayout, true);
                         mEditText.postDelayed(new Runnable() {
@@ -90,7 +90,7 @@ public class EmotionKeyboard {
         emotionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mEmotionLayout.isShown()) {
+                if (mEmotionLayout != null && mEmotionLayout.isShown()) {
                     lockContentHeight();
                     hideLayout(mEmotionLayout, true);
                     unlockContentHeightDelayed();
@@ -100,7 +100,7 @@ public class EmotionKeyboard {
                         showLayout(mEmotionLayout);
                         unlockContentHeightDelayed();
                     } else {
-                        if(mExtendLayout.isShown()){
+                        if(mExtendLayout != null && mExtendLayout.isShown()){
                             hideLayout(mExtendLayout, false);
                         }
                         showLayout(mEmotionLayout);
@@ -112,12 +112,12 @@ public class EmotionKeyboard {
     }
 
     /* 绑定扩展按钮(拍照上传、位置、红包等) */
-    public EmotionKeyboard bindToExtendbutton(View extendButton){
+    public EmotionKeyboard bindToExtendButton(View extendButton){
         extendButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                if (mExtendLayout.isShown()) {
+                if (mExtendLayout != null && mExtendLayout.isShown()) {
                     lockContentHeight();
                     hideLayout(mExtendLayout, true);
                     unlockContentHeightDelayed();
@@ -127,7 +127,7 @@ public class EmotionKeyboard {
                         showLayout(mExtendLayout);
                         unlockContentHeightDelayed();
                     } else {
-                        if (mEmotionLayout.isShown()) {
+                        if (mEmotionLayout != null && mEmotionLayout.isShown()) {
                             hideLayout(mEmotionLayout, false);
                         }
                         showLayout(mExtendLayout);

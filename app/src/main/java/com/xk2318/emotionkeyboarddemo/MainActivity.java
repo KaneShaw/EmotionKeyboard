@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 .setEmotionView(emotionView)
                 .bindToContent(contentView)
                 .bindToEditText(edittext)
-                .bindToExtendbutton(extendButton)
+                .bindToExtendButton(extendButton)
                 .bindToEmotionButton(emotionButton)
                 .build();
         setUpEmotionViewPager();
